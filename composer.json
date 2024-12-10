@@ -1,0 +1,56 @@
+{
+    "name": "larapps/gift-certificate-manager",
+    "description": "Gift certificate management tool for Bigcommerce.",
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "keywords": [
+        "larapps",
+        "gift-certificate-manager"
+    ],
+    "homepage": "https://github.com/larapps/gift-certificate-manager",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Balashanmugam",
+            "email": "balashanmugam.srm@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larapps\\GiftCertificateManager\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Larapps\\GiftCertificateManager\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Larapps\\GiftCertificateManager\\GiftCertificateManagerServiceProvider"
+            ],
+            "aliases": {
+                "GiftCertificateManager": "Larapps\\GiftCertificateManager\\GiftCertificateManagerFacade"
+            }
+        }
+    }
+}
